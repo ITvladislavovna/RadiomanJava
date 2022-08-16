@@ -2,6 +2,9 @@ public class Radio {
 
     private int currentRadio;
     private int currentVolume;
+
+
+
     private int quantityRadio = 10;
 
     public Radio(int quantityRadio) {
@@ -9,7 +12,11 @@ public class Radio {
     }
 
     public Radio() {
-        this.quantityRadio=getQuantityRadio();
+        this.quantityRadio = getQuantityRadio();
+    }
+
+    public void setQuantityRadio(int quantityRadio) {
+        this.quantityRadio = quantityRadio;
     }
 
     public int getCurrentRadio() {
@@ -26,18 +33,18 @@ public class Radio {
         return quantityRadio;
     }
 
-    public void setCurrentRadio(int newCurrentRadio) {
+   public void setCurrentRadio(int newCurrentRadio) {
         if (newCurrentRadio < 0) {
             return;
         }
-        if (newCurrentRadio > 9) {
+        if (newCurrentRadio > quantityRadio) {
             return;
         }
         currentRadio = newCurrentRadio;
     }
 
     public void setCurrentVolume(int newCurrentVolume) {
-        if (newCurrentVolume <0) {
+        if (newCurrentVolume < 0) {
             return;
         }
         if (newCurrentVolume > 100) {

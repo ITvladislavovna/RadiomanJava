@@ -5,18 +5,21 @@ public class RadioTest {
 
     @Test
     public void quantityRadio() {
-        Radio radio = new Radio(5);
-
-        Assertions.assertEquals(5,radio.getQuantityRadio());
+        Radio radio = new Radio(20);
+        radio.setCurrentRadio(15);
+        int expected =15;
+        int actual = radio.getCurrentRadio();
+        Assertions.assertEquals(actual, expected);
 
     }
+
     @Test
     public void quantityStandardRadio() {
         Radio radio = new Radio();
-        int actual=10;
+        int actual = 10;
         int expected = radio.getQuantityRadio();
 
-        Assertions.assertEquals(actual,expected);
+        Assertions.assertEquals(actual, expected);
 
     }
 
