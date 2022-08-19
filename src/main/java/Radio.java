@@ -8,14 +8,17 @@ public class Radio {
     private int quantityRadio = 10;
 
     public Radio(int quantityRadio) {
+
         this.quantityRadio = quantityRadio;
     }
 
     public Radio() {
+
         this.quantityRadio = getQuantityRadio();
     }
 
     public void setQuantityRadio(int quantityRadio) {
+
         this.quantityRadio = quantityRadio;
     }
 
@@ -55,7 +58,7 @@ public class Radio {
     }
 
     public void nextStation() {
-        if (currentRadio == 9) {
+        if (currentRadio == quantityRadio-1) {
             currentRadio = 0;
         } else {
             currentRadio = currentRadio + 1;
@@ -64,7 +67,7 @@ public class Radio {
 
     public void prevStation() {
         if (currentRadio == 0) {
-            currentRadio = 9;
+            currentRadio = quantityRadio-1;
         } else {
             currentRadio = currentRadio - 1;
         }
